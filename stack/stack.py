@@ -49,10 +49,12 @@ class Stack:
   def __init__(self, dynamicArray) -> None:
     self.arr = dynamicArray
 
+  # O(1) time
   def push(self, val):
     self.arr.append(val)
     return self.arr
   
+  # O(1) time
   def pop(self):
     self.arr.removeEnd()
     return self.arr
