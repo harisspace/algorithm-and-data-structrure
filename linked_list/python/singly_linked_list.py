@@ -47,7 +47,7 @@ class SinglyLinkedList:
   # Most cases takes O(n) time complexity
   def removeMid(self, index):
     curr = self.accessElement(index - 1)
-    val = curr.val
+    val = curr.next.val
     curr.next = curr.next.next
     return val
 
@@ -61,9 +61,9 @@ singlyLinkedList = SinglyLinkedList()
 singlyLinkedList.insertEnd(1)
 singlyLinkedList.insertEnd(2)
 singlyLinkedList.insertEnd(3)
-singlyLinkedList.removeEnd()
-singlyLinkedList.insertMid(1,10)
-singlyLinkedList.removeMid(1)
+# singlyLinkedList.removeEnd()
+# singlyLinkedList.insertMid(1,10)
+print(singlyLinkedList.removeMid(1))
 singlyLinkedList.printNode()
 
     
